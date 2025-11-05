@@ -11,6 +11,15 @@ from .security import require_api_key
 
 app = FastAPI(title="Smart Traffic Cloud API", version="1.0")
 
+@app.get("/")
+def home():
+    return {
+        "status": "✅ API is live",
+        "docs": "/docs",
+        "openapi": "/openapi.json",
+        "message": "Welcome to Smart Traffic Cloud API"
+    }
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
