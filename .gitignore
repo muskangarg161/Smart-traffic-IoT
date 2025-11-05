@@ -21,3 +21,15 @@ backend/.env
 # OS files
 .DS_Store
 Thumbs.db
+
+# Ignore Streamlit cache
+.streamlit/
+
+# Ignore virtual env folders
+env/
+ENV/
+venv/
+
+# Extra safety ignore
+*.sqlite
+*.sqlite3
