@@ -12,6 +12,10 @@ from .security import require_api_key
 app = FastAPI(title="Smart Traffic Cloud API", version="1.0")
 
 @app.get("/")
+def root():
+    return {"message": "Smart Traffic IoT API is running!"}
+
+@app.get("/home")
 def home():
     return {
         "status": "✅ API is live",
